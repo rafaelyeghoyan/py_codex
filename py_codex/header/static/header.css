@@ -25,6 +25,10 @@
     margin: auto;
 }
 
+#menu-bars{
+    display: none;
+}
+
 header{
     position: fixed;
     top: 0;left: 0;right: 0;
@@ -53,7 +57,6 @@ header{
     font-size: 20px;
     line-height: 24px;
     font-family: 'Tomorrow';
-    ;
 }
 
 .header-content-navbar-rout:hover{
@@ -69,7 +72,6 @@ header{
 footer{
     background: var(--black);
 }
-
 .footer-content{
     padding: 120px 0;
     display: flex;
@@ -133,4 +135,48 @@ footer{
     font-family: 'Lato';
     line-height: 19.68px;
     letter-spacing: 1%;
+}
+
+
+@media screen and (max-width:1200px) {
+    .container{
+        padding: 0 3%;
+    }
+    .header-content-navbar-rout:not(:last-of-type){
+        margin-right: 60px
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .header-content-navbar-rout:not(:last-of-type){
+        margin-right: 40px
+    }
+}
+
+@media screen and (max-width:955px) {
+    .header-content-navbar-rout{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:895px) {
+    .header-content-navbar-rout:not(:last-of-type){
+        margin-right: 20px
+    }
+}
+
+@media screen and (max-width:800px) {
+    .header-content-navbar{
+        display: none;
+    }
+    #menu-bars{
+        display: initial;
+    }
+    .fa-bars{
+        font-size: 40px;
+        color: var(--white);
+    }
+    .header-content-navbar.active{
+        display: block;
+    }
 }
