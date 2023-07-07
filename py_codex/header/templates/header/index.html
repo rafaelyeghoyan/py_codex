@@ -1,0 +1,80 @@
+ <!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    {% load static %}
+   
+    <link rel="stylesheet" href="{% static 'header.css' %}"/>
+    
+</head>
+<body>
+    
+     <header>
+        <div class="container">
+            <div class="header-content">
+                <p class="header-content-logo">PyCodeX</p>
+                <nav class="header-content-navbar">
+                    <a href="#" class="header-content-navbar-rout">Home</a>
+                    <a href="#" class="header-content-navbar-rout">Projects</a>
+                    <a href="#" class="header-content-navbar-rout">Events</a>
+                    <a href="#" class="header-content-navbar-rout">Courses</a>
+                    <a href="#" class="header-content-navbar-rout">About us</a>
+                    <a href="#" class="header-content-navbar-rout">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <nav class="footer-content-navbar">
+                    <p class="footer-contnet-navbar-text">PyCodeX</p>
+                    <a href="#" class="footer-content-navbar-rout">Home</a> 
+                    <a href="#" class="footer-content-navbar-rout">Project</a> 
+                    <a href="#" class="footer-content-navbar-rout">About us</a> 
+                    <a href="#" class="footer-content-navbar-rout">Contact</a> 
+                </nav>
+
+                <nav class="footer-content-navbar">
+                    <p class="footer-contnet-navbar-text">Services</p>
+                    <a href="#" class="footer-content-navbar-rout">Robotics</a> 
+                    <a href="#" class="footer-content-navbar-rout">Web Desing</a> 
+                    <a href="#" class="footer-content-navbar-rout">Machine Learning</a> 
+                </nav>
+
+                <nav class="footer-content-navbar">
+                    <p class="footer-contnet-navbar-text">Help</p>
+                    <a href="#" class="footer-content-navbar-rout">Getting started</a>
+                    <a href="#" class="footer-content-navbar-rout">Network status</a>
+                    <a href="#" class="footer-content-navbar-rout">FAQ</a>
+                    <a href="#" class="footer-content-navbar-rout">Referal program</a>
+                </nav>
+
+                <div class="footer-content-subscribe">
+                    <h3 class="footer-contnet-navbar-text">Subscribe</h3>
+                    <input 
+                        class="footer-content-subscibe-input" 
+                        type="text" 
+                        placeholder="Your email address"
+                    >
+                    <button type="button" class="footer-btn">Send</button>
+                    <div class="footer-content-subscibe-icon">
+                        <img src="{% static './images/google.svg' %}" alt="">
+                        <img src="{% static './images/facebook.svg' %}" alt="">
+                        <img src="{% static './images/instagram.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span class="footer-copyright-text">
+                    &copy; 2023 TRVST LTD. All Rights Reserved
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
