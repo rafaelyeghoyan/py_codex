@@ -1,0 +1,45 @@
+li.PyCodeX {
+    width:193px;
+    height:47px;
+    margin-top:15px;
+    margin-left:40px;
+    font-family:'Rubik Glitch';
+    font-weight:400;
+    font-size:40px;
+    line-height:47.4px;
+    letter-spacing:1.5%;
+    text-align:center;
+    color:white;
+}
+ul.container{
+    width:100%;
+    height:87px;
+    border:0px 0px 1px 0px;
+    padding:0;
+    background: #0A0F0D 29%;
+    opacity: 0.8;
+
+}
+li.home{
+    width:93px;
+    height:32px;
+    border-radius:4px;
+    padding:4px 16px 4px 16px;
+    background:linear-gradient(to left, #353BD2, #10E371);
+    text-align:center;
+    margin-left:100px;
+    margin-top:20px;
+
+
+}
+ li{
+  display: inline;
+  text-align: center;
+  padding: 0;
+  float: left;
+  margin-top:25px;
+  margin-right:5%;
+  color:white;
+
+
+}
