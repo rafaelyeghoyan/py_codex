@@ -1,3 +1,4 @@
+{% load static %}
 <!Doctype html>
 <html lang="en">
 <head>
@@ -7,13 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {% load static %}
     <link rel="stylesheet" href="{% static 'header.css' %}"/>
     
 </head>
 <body>
 
-     <!-- <header>
+     <header>
         <div class="container">
             <div class="header-content">
                 <p class="header-content-logo">PyCodeX</p>
@@ -30,14 +30,50 @@
                 </nav>
             </div>
         </div>
-    </header> -->
+    </header>
     
+    <section class="btn-section">
+        <div class="container">
+            <div class="btn-section-content">
+                <p class="btn-section-content-text">
+                    In 
+                    <span class="btn-section-content-text-gradient">
+                        PyCodeX
+                    </span> 
+                    we offer...
+                </p>
+                <div class="btn-section-content-btns">
+                    <button class="btn-section-content-btns-btn2">Web</button>
+                    <button class="btn-section-content-btns-btn2">Mobile</button>
+                    <button class="btn-section-content-btns-btn2">Gaming</button>
+                    <button class="btn-section-content-btns-btn2">Robotics</button>
+                    <button class="btn-section-content-btns-btn2">Education</button>
+                    <button class="btn-section-content-btns-btn2">Machine Learning</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
+    <section class="py-codex2">
+        <div class="container">
+            <div class="asd">
+            <img class="asd-img" src="{% static './images/triagle_two.png' %}" alt="">
+            <div class="py-codex2-content">
+                
+                <h2 class="py-codex2-content-heading">PyCodex</h2>
+                <p class="py-codex2-content-text">
+                    Discover the Possibilities: AI and Python
+                        <br> 
+                    Solutions for the Modern World
+                </p>
 
+                <button class="btn">Get started</button>
+            </div>
+        </div>
+    </div>
+    </section>
 
-
-    <!-- <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <nav class="footer-content-navbar">
@@ -84,7 +120,7 @@
                 </span>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 
     <script src="{% static 'script/script.js' %}"></script>
