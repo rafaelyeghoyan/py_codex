@@ -36,6 +36,7 @@
     font-size: 40px;
     text-transform: uppercase;
     padding: 7px;
+    cursor: pointer;
 }
 
 /* header */
@@ -134,11 +135,11 @@ header {
 .py-codex2{
     background-color: var(--black);
 }
-.asd{
+.py-codex2-flex{
     display: flex;
     justify-content: space-between;
 }
-.asd-img{
+.py-codex2-flex-img{
     width: 400px;
     height: 400px;
 }
