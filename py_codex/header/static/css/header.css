@@ -1,6 +1,6 @@
-@import url("../static/fonts/Lato/stylesheet.css");
-@import url("../static/fonts/Tomorrow/stylesheet.css");
-@import url("../static/fonts/RubikGlitch/stylesheet.css");
+@import url("../fonts/Lato/stylesheet.css");
+@import url("../fonts/RubikGlitch/stylesheet.css");
+@import url("../fonts/Tomorrow/stylesheet.css");
 
 /* reset */
 
@@ -12,7 +12,6 @@
     --white: #ffffff;
     --white2: rgba(255, 255, 255, 0.7);
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +20,15 @@
     border: none;
     outline: none;
     text-decoration: none;
+    -webkit-box-sizing: border-box;
 }
-
+body{
+    background: var(--black);
+}
 .container {
     max-width: 1200px;
     margin: auto;
 }
-
 .btn {
     background: transparent;
     color: var(--white);
@@ -51,7 +52,7 @@ header {
     left: 0;
     right: 0;
     padding: 20px 0;
-    background: rgba(0, 0, 0, 0.87);
+    background: rgba(10, 17, 20, 0.87);
     backdrop-filter: blur(1px);
     z-index: 1000;
 }
@@ -84,14 +85,82 @@ header {
     margin-right: 50px;
 }
 
+
+/* py-codex1 */
+
+.py-codex1{
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: 87.4px;
+}
+.py-codex1-content{
+    background: url(../images/headmatrix.png),url(../images/triagle_one.png);
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-size: 45%, 40%;
+    background-position-x: 700px, 700px;
+    background-position-y: -20px, 0px;
+}
+.py-codex1-content-text{
+    color: var(--white);
+    font-family: 'Rubik Glitch';
+    font-size: 160px;
+    line-height: 189.6px;
+    letter-spacing: 2.4px;
+    padding-top: 30px;
+}
+.py-codex1-content-description{
+    color: var(--white);
+    font-family: Tomorrow;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    padding: 30px 0 30px;
+}
+
+.py-codex1-content-description-span{
+    background: linear-gradient(to right ,var(--blue), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.py-codex1-content2{
+    background: rgba(16, 227, 113, 0.04);
+    backdrop-filter: blur(1px);
+    border: 1px solid var(--green);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1400px;
+    margin: auto;
+    /* margin-top: 100px; */
+}
+
+.py-codex1-content2-text{
+    font-family: 'Tomorrow';
+    font-size: 70px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 96px;
+}
+
+.py-codex1-content2-text2{
+    color: var(--white);
+    font-family: 'Tomorrow';
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 38.4px;
+}
+
+
 /* button section */
 .btn-section {
     background: var(--black);
-    background-image: url("./images/btn-background.png");
+    background-image: url(../images/btn-background.png);
     background-size: 102%;
     background-repeat: no-repeat;
-    height: 73vh;
-    margin-top: 87.4px;
+    height: 75vh;
 }
 .btn-section-content-text {
     padding-top: 50px;
@@ -218,6 +287,9 @@ footer {
     margin-top: 20px;
     display: flex;
     gap: 20px;
+}
+.footer-content-subscibe-icon img{
+    cursor: pointer;
 }
 .footer-copyright {
     padding-bottom: 25px;
