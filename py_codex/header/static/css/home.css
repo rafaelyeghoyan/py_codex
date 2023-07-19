@@ -8,7 +8,7 @@
     --blue: #353bd2;
     --green: #10e371;
     --green2: #0c4426;
-    --black: #0a0f0d;
+    --black: #101010;
     --white: #ffffff;
     --white2: rgba(255, 255, 255, 0.7);
 }
@@ -22,21 +22,24 @@
     text-decoration: none;
     -webkit-box-sizing: border-box;
 }
-body{
+body {
     background: var(--black);
 }
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 .btn {
-    background: transparent;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--white);
-    border: 1px solid var(--white);
     font-family: "Tomorrow";
     font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    padding: 7px;
+    padding: 10px 30px;
     cursor: pointer;
 }
 
@@ -52,15 +55,21 @@ header {
     left: 0;
     right: 0;
     padding: 20px 0;
-    background: rgba(10, 17, 20, 0.87);
+    background: rgba(29, 30, 29, 0.9);
     backdrop-filter: blur(1px);
     z-index: 1000;
 }
+
+header .container {
+    max-width: 1200px;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header-content-logo {
     font-size: 40px;
     line-height: 47.4px;
@@ -69,6 +78,7 @@ header {
     color: var(--white);
     font-weight: 400;
 }
+
 .header-content-navbar-rout {
     color: var(--white);
     font-size: 20px;
@@ -76,157 +86,136 @@ header {
     padding: 0px 10px;
     font-family: "Tomorrow";
 }
+
 .header-content-navbar-rout:hover {
     border-radius: 5px;
     background-image: linear-gradient(to right, var(--blue), var(--green));
     padding: 5px 10px;
 }
+
 .header-content-navbar-rout:not(:last-of-type) {
     margin-right: 50px;
 }
 
-
 /* py-codex1 */
 
-.py-codex1{
-    background-image: url("../images/background.png");
-    background-repeat: no-repeat;
+.py-codex1 {
+    margin-top: 86.7px;
+    background: url("../images/background-1Home.png") no-repeat;
+    background-size: 100%;
     height: 100vh;
-    margin-top: 87.4px;
 }
-.py-codex1-content{
-    background: url(../images/headmatrix.png),url(../images/triagle_one.png);
-    background-repeat: no-repeat;
-    height: 70vh;
-    background-size: 45%, 40%;
-    background-position-x: 700px, 700px;
-    background-position-y: -20px, 0px;
+.py-codex1-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    padding-top: 15%;
 }
-.py-codex1-content-text{
+.py-codex1-content-heading {
     color: var(--white);
-    font-family: 'Rubik Glitch';
-    font-size: 160px;
-    line-height: 189.6px;
+    font-family: "Rubik Glitch";
+    font-size: 140px;
+    font-weight: 500;
     letter-spacing: 2.4px;
     padding-top: 30px;
 }
-.py-codex1-content-description{
+.py-codex1-content-description {
     color: var(--white);
     font-family: Tomorrow;
     font-size: 40px;
-    line-height: 48px;
-    font-weight: 700;
-    padding: 30px 0 30px;
+    line-height: normal;
+    padding: 20px 0 40px;
 }
-
-.py-codex1-content-description-span{
-    background: linear-gradient(to right ,var(--blue), var(--green));
+.py-codex1-content-description-span {
+    background: linear-gradient(to right, var(--blue), var(--green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.py-codex1-content2{
-    background: rgba(16, 227, 113, 0.04);
-    backdrop-filter: blur(1px);
-    border: 1px solid var(--green);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 1400px;
-    margin: auto;
-    /* margin-top: 100px; */
+/* project section */
+.project {
+    padding-bottom: 100px;
 }
-
-.py-codex1-content2-text{
-    font-family: 'Tomorrow';
-    font-size: 70px;
+.project-content-heading {
+    font-family: "Lato";
+    padding-top: 120px;
+    text-decoration: underline;
+    width: max-content;
+    color: var(--white);
+    font-size: 75px;
     font-weight: 600;
-    color: var(--white);
-    line-height: 96px;
+    line-height: 82px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
 }
-
-.py-codex1-content2-text2{
-    color: var(--white);
-    font-family: 'Tomorrow';
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 38.4px;
-}
-
-
-/* button section */
-.btn-section {
-    background: var(--black);
-    background-image: url(../images/btn-background.png);
-    background-size: 102%;
-    background-repeat: no-repeat;
-    height: 75vh;
-}
-.btn-section-content-text {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 40px;
-    font-family: "Tomorrow";
-    color: var(--white);
-    line-height: 48px;
-}
-.btn-section-content-text-gradient {
-    background: linear-gradient(to right, var(--blue), var(--green));
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-weight: 700;
-    color: transparent;
-}
-.btn-section-content-btns {
+.project-content-projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 86px;
 }
-.btn-section-content-btns-btn2 {
-    width: 32%;
-    background: rgba(54, 59, 211, 0.2);
-    backdrop-filter: blur(1px);
-    border: 1px solid var(--blue);
-    padding: 15px 0;
-    color: var(--white);
-    font-family: "Tomorrow";
-    font-size: 40px;
+.project-content-projects-mini {
+    width: 30%;
+    height: 298px;
+    background: #282b32;
     border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.btn-section-content-btns-btn2:hover{
-    backdrop-filter: blur(10px);
-}
-
-/* py-codex2 */
-
-.py-codex2{
-    background-color: var(--black);
-    padding-bottom: 20px;
-}
-.py-codex2-flex{
     display: flex;
-    justify-content: space-between;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.py-codex2-flex-img{
-    width: 400px;
-    height: 400px;
+.project-content-projects-mini:nth-child(even) {
+    background: #27352e;
 }
-.py-codex2-content-heading{
-    font-family: "Rubik Glitch";
-    font-size: 80px;
-    line-height: 94.8px;
+.project-content-projects-mini span {
     color: var(--white);
-}
-.py-codex2-content-text{
-    color: var(--white);
+    font-family: "Lato";
     font-size: 40px;
-    font-family: 'Tomorrow';
-    line-height: 48px;
-    padding: 35px 0;
+    font-weight: 600;
+    line-height: 82px;
+    letter-spacing: 2.25px;
+    padding-bottom: 30px;
+}
+.project-content-projects-mini img {
+    width: 133px;
+    height: 92px;
 }
 
+/* PyCodex section */
+.pycodex {
+    background: url(../images/background-2Home.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.pycodex-con {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 18%;
+}
+.pycodex-content-heading {
+    color: var(--white);
+    font-family: "Rubik Glitch";
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    text-align: center;
+}
+.btn-div {
+    text-align: center;
+}
+.pycodex-content-description {
+    text-align: center;
+    color: var(--white);
+    font-family: Tomorrow;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 40px;
+}
 /* footer */
 
 footer {
@@ -267,14 +256,14 @@ footer {
     padding: 10px;
     width: 365px;
     border-radius: 5px;
-    background: var(--green2);
+    background: transparent;
     color: var(--white2);
 }
 .footer-content-subscibe-input::placeholder {
     color: var(--white2);
 }
 .footer-btn {
-    background: var(--green);
+    background: var(--white);
     color: var(--black);
     padding: 9.7px 25px;
     border-radius: 5px;
@@ -288,7 +277,7 @@ footer {
     display: flex;
     gap: 20px;
 }
-.footer-content-subscibe-icon img{
+.footer-content-subscibe-icon img {
     cursor: pointer;
 }
 .footer-copyright {
@@ -312,12 +301,6 @@ footer {
     .header-content-navbar-rout:not(:last-of-type) {
         margin-right: 40px;
     }
-    .btn-section-content-btns-btn2{
-        font-size: 35px;
-    }
-    .py-codex2-content-text{
-        font-size: 30px;
-    }
 }
 
 /* only header */
@@ -327,66 +310,17 @@ footer {
     }
 }
 
-/* only py-codex2 */
-@media screen and (max-width:1033px){
-    .py-codex2-content-text{
-        font-size: 28px;
-    }
-}
-
-/* only btn-section */
-@media screen and (max-width:1005px) {
-    .btn-section-content-btns-btn2{
-        font-size: 30px;
-    }
-}
-
-/* header, btn-section */
+/* header */
 @media screen and (max-width: 955px) {
     .header-content-navbar-rout {
         font-size: 17px;
     }
-    .btn-section{
-        background-position-y: 30px;
-    }
 }
 
-/*only py-codex2 */
-@media screen and (max-width: 931px) {
-    .py-codex2-flex{
-        background-image: url(./images/triagle_two.png);
-        background-repeat: no-repeat;
-        height: 100vh;
-        background-size: cover;
-        background-position-y: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .py-codex2-flex-img{
-        display: none;
-    }
-}
-/* header btn-section*/
+/* header */
 @media screen and (max-width: 895px) {
     .header-content-navbar-rout:not(:last-of-type) {
         margin-right: 10px;
-    }
-    .btn-section{
-        background-position-y: 50px;
-    }
-}
-
-/* only btn-section */
-
-@media screen and (max-width:862px) {
-    
-    .btn-section-content-text{
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    .btn-section-content-btns-btn2{
-        font-size: 25px;
     }
 }
 
@@ -397,7 +331,7 @@ footer {
     }
 }
 
-/* header, btn-section*/
+/* header*/
 @media screen and (max-width: 800px) {
     .header-content-navbar {
         display: none;
@@ -424,55 +358,14 @@ footer {
         margin-bottom: 10px;
         font-size: 22px;
     }
-    .btn-section{
-        background-position-y: 80px;
-    }
-}
-
-/* btn-section */
-@media screen and (max-width: 532px) {
-    .btn-section{
-        background-position-y: 100px;
-    }
-    .btn-section-content-btns{
-        justify-content: center;
-    }
 }
 
 /* footer, btn-section*/
 @media screen and (max-width: 480px) {
-    .btn-section{
-        background-position-y: 120px;
-    }
-    .btn-section-content-text{
-        font-size: 30px;
-    }
     .footer-content-subscibe-input {
         display: block;
         width: 300px;
         margin-bottom: 10px;
-    }
-}
-
-/* only py-codex2 */
-@media screen and (max-width:440px) {
-    .py-codex2-flex{
-        background-position-x: 50%;
-    }
-    .py-codex2-content-text{
-        font-size: 25px;
-    }
-}
-/* btn-section, py-codex2, btn */
-@media screen and (max-width:405px) {
-    .btn-section-content-btns-btn2{
-        font-size: 20px;
-    }
-    .py-codex2-content-heading{
-        font-size: 70px;
-    }
-    .btn{
-        font-size: 30px;
     }
 }
 
@@ -484,19 +377,10 @@ footer {
     .header-content-logo {
         font-size: 35px;
     }
-    .btn-section-content-text{
-       font-size: 25px;
-    }
 }
 
-/* footer, btn-section, py-codex2 */
+/* footer */
 @media screen and (max-width: 330px) {
-    .btn-section-content-btns-btn2{
-        font-size: 15px;
-     }
-     .py-codex2-content-heading{
-        font-size: 60px;
-    }
     .footer-content-subscibe-input {
         width: 280px;
     }
