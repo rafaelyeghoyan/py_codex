@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link
+        rel="stylesheet"
+        href="{% static 'css/home.css' %}"
+        type="text/css"
+        media="all"
+    />
+    <link
+        rel="stylesheet"
+        href="{% static 'css/contact.css' %}"
+        type="text/css"
+        media="all"
+    />
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+
+    <!-- Home page -->
+
+    {% block main %}
+    {% endblock %}
+    {% block project %}
+    {% endblock %}
+    {% block pycodex %}
+    {% endblock %}
+    {% block caruel %}
+    {% endblock %}
+    <!-- Contact page -->
+    {% block social %}
+    {% endblock %}
+    {% block form %}
+    {% endblock %}
+
+
+    {% block footer %}
+    {% endblock %}
+
+    <script src="{% static 'script/script.js' %}"></script>
+</body>
+</html>

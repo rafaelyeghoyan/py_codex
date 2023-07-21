@@ -1,0 +1,135 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+    {% block title %}Contact{% endblock %}
+    {% block header %}
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <p><a href="home" class="header-content-logo">PyCodeX</a></p>
+                        <div id="menu-bars">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <nav class="header-content-navbar">
+                            {% for i in menus.menu %}
+                                <a href="{{i.href}}" class="header-content-navbar-rout">{{i.name}}</a>
+                            {% endfor %}
+                        </nav>
+                    </div>
+                </div>
+            </header>
+    {% endblock %}
+    
+    {% block social %}
+        <section class="social">
+            <div class="container">
+                <h1 class="social-heading">Contact</h1>
+                <div class="social-content">
+                    <div id="map">
+                        {{ map_html|safe }}
+                    </div>
+                    <div class="social-media">
+                        <aside class="social-media-mini">
+                            <img src="{% static './images/icon/linkedin.svg' %}" alt="">
+                            <a class="social-media-mini-routing" href="">Open</a>
+                        </aside>
+                        <aside class="social-media-mini">
+                            <img src="{% static './images/icon/instagram1.svg' %}" alt="">
+                            <a class="social-media-mini-routing" href="">Open</a>
+                        </aside>
+                    </div>
+                    <div class="social-media2">
+                        <aside class="social-media-mini">
+                            <img src="{% static './images/icon/mail.svg' %}" alt="">
+                            <a class="social-media-mini-routing" href="">Open</a>
+                        </aside>
+                        <aside class="social-media-mini">
+                            <img src="{% static './images/icon/facebook1.svg' %}" alt="">
+                            <a class="social-media-mini-routing" href="">Open</a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+
+    {% block form %}
+        <form method="post">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="inputs">
+                <div>
+                    <label for="">Name</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Phone number</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Email address</label>
+                    <input type="email">
+                </div>
+            </div>
+        </form>
+    {% endblock %}
+
+    {% block footer %}
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">PyCodeX</p>
+                        {% for item in menus.footerMenu.menuOne %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">Services</p>
+                        {% for item in menus.footerMenu.menuTwo %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">Help</p>
+                        {% for item in menus.footerMenu.menuThree %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
+                    <div class="footer-content-subscribe">
+                        <h3 class="footer-contnet-navbar-text">Subscribe</h3>
+                        <input
+                            class="footer-content-subscibe-input"
+                            type="text"
+                            placeholder="Your email address"
+                        />
+                        <button type="button" class="footer-btn">Send</button>
+                        <div class="footer-content-subscibe-icon">
+                            <img
+                                src="{% static './images/icon/google.svg' %}"
+                                alt=""
+                            />
+                            <img
+                                src="{% static './images/icon/facebook.svg' %}"
+                                alt=""
+                            />
+                            <img
+                                src="{% static './images/icon/instagram.svg' %}"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <span class="footer-copyright-text">
+                        &copy; 2023 PyCodeX LTD. All Rights Reserved
+                    </span>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}

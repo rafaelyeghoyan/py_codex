@@ -3,7 +3,6 @@
 @import url("../fonts/Tomorrow/stylesheet.css");
 
 /* reset */
-
 :root {
     --blue: #353bd2;
     --green: #10e371;
@@ -292,7 +291,7 @@ footer {
 
 /* media request */
 
-/* header,container,btn-section,py-codex2 */
+/* header,container, */
 
 @media screen and (max-width: 1200px) {
     .container {

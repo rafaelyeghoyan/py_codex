@@ -1,153 +1,176 @@
+{% extends 'layout/layout.html' %}
 {% load static %}
-<!Doctype html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css" media="all"/>
-    
-</head>
+    {% block title %}Home{% endblock %}
 
-<body>
-
-    
-     <header>
-        <div class="container">
-            <div class="header-content">
-                <p ><a href="#" class="header-content-logo">PyCodeX</a></p>
-                <div id="menu-bars">
-                    <i class="fa-solid fa-bars"></i>
+    {% block header %}
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <p><a href="home" class="header-content-logo">PyCodeX</a></p>
+                    <div id="menu-bars">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <nav class="header-content-navbar">
+                        {% for i in menus.menu %}
+                            <a href="{{i.href}}" class="header-content-navbar-rout">{{i.name}}</a>
+                        {% endfor %}
+                    </nav>
                 </div>
-                <nav class="header-content-navbar">
-                    {% for i in menus.menu %}
-                        <a href="#" class="header-content-navbar-rout">{{i}}</a>
-                    {% endfor %}
-                </nav>
             </div>
-        </div>
-    </header>
-
-
-    <main class="py-codex1">
-        <div class="container">
-            <div class="py-codex1-content">
-                <h1 class="py-codex1-content-heading">PyCodeX</h1>
-                <p class="py-codex1-content-description">
-                    Unleashing the Power of 
-                        <span class="py-codex1-content-description-span"> 
+        </header>
+    {% endblock %}
+    
+    {% block main %}
+        <main class="py-codex1">
+            <div class="container">
+                <div class="py-codex1-content">
+                    <h1 class="py-codex1-content-heading">PyCodeX</h1>
+                    <p class="py-codex1-content-description">
+                        Unleashing the Power of
+                        <span class="py-codex1-content-description-span">
                             AI and Python
-                        </span> <br>
-                    to Transform the Digital Landscape
-                </p>
-                <button class="btn">get started</button>
-            </div>
-        </div>
-    </main>
-    
-    <section class="project">
-        <div class="container">
-            <div class="project-content">
-                <h2 class="project-content-heading">Project</h2>
-                <div class="project-content-projects">
-                    <a href="#" class="project-content-projects-mini">
-                        <span>Web</span>
-                        <img src="{% static './images/web.png' %}" alt="web">
-                    </a>
-                     <a href="#" class="project-content-projects-mini">
-                        <span>Mobile</span>
-                        <img src="{% static './images/mobile.png' %}" alt="">
-                    </a>
-                     <a href="#" class="project-content-projects-mini">
-                        <span>Gaming</span>
-                        <img src="{% static './images/game.png' %}" alt="">
-                    </a>
-                     <a href="#" class="project-content-projects-mini">
-                        <span>Robotics</span>
-                        <img src="{% static './images/robotics.png' %}" alt="">
-                    </a>
-                     <a href="#" class="project-content-projects-mini">
-                        <span>Education</span>
-                        <img src="{% static './images/education.png' %}" alt="">
-                    </a>
-                     <a href="#" class="project-content-projects-mini">
-                        <span>Machine Learning</span>
-                        <img src="{% static './images/ml.png' %}" alt="">
-                    </a>
+                        </span>
+                        <br />
+                        to Transform the Digital Landscape
+                    </p>
+                    <button class="btn">get started</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </main>
+    {% endblock %}
 
-    <section class="pycodex">
-        <div class="container">
-            <div class="pycodex-con">
-            <div class="pycodex-content">
-                <h3 class="pycodex-content-heading">PyCodeX</h3>
-                <p class="pycodex-content-description">
-                    Discover the Possibilities: AI and Python 
-                        <br>
-                    Solutions for the Modern World
-                </p>
-               <div class="btn-div"> <button class="btn">get started</button></div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-   <footer>
-        <div class="container">
-            <div class="footer-content">
-                <nav class="footer-content-navbar">
-                    <p class="footer-contnet-navbar-text">PyCodeX</p>
-                    {% for item in menus.footerMenu.menuOne %}
-                        <a href="#" class="footer-content-navbar-rout">{{item}}</a> 
-                    {% endfor %}
-                </nav>
-
-                <nav class="footer-content-navbar">
-                    <p class="footer-contnet-navbar-text">Services</p>
-                    {% for item in menus.footerMenu.menuTwo %}
-                        <a href="#" class="footer-content-navbar-rout">{{item}}</a> 
-                    {% endfor %}
-                </nav>
-                <nav class="footer-content-navbar">
-                    <p class="footer-contnet-navbar-text">Help</p>
-                    {% for item in menus.footerMenu.menuThree %}
-                        <a href="#" class="footer-content-navbar-rout">{{item}}</a> 
-                    {% endfor %}
-                </nav>
-
-                <div class="footer-content-subscribe">
-                    <h3 class="footer-contnet-navbar-text">Subscribe</h3>
-                    <input 
-                        class="footer-content-subscibe-input" 
-                        type="text" 
-                        placeholder="Your email address"
-                    >
-                    <button type="button" class="footer-btn">Send</button>
-                    <div class="footer-content-subscibe-icon">
-                        <img src="{% static './images/google.svg' %}" alt="">
-                        <img src="{% static './images/facebook.svg' %}" alt="">
-                        <img src="{% static './images/instagram.svg' %}" alt="">
+    {% block project %}
+        <section class="project">
+            <div class="container">
+                <div class="project-content">
+                    <h2 class="project-content-heading">Project</h2>
+                    <div class="project-content-projects">
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Web</span>
+                            <img
+                                src="{% static './images/web.png' %}"
+                                alt="web"
+                            />
+                        </a>
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Mobile</span>
+                            <img
+                                src="{% static './images/mobile.png' %}"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Gaming</span>
+                            <img
+                                src="{% static './images/game.png' %}"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Robotics</span>
+                            <img
+                                src="{% static './images/robotics.png' %}"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Education</span>
+                            <img
+                                src="{% static './images/education.png' %}"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#" class="project-content-projects-mini">
+                            <span>Machine Learning</span>
+                            <img src="{% static './images/ml.png' %}" alt="" />
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-copyright">
-                <span class="footer-copyright-text">
-                    &copy; 2023 PyCodeX LTD. All Rights Reserved
-                </span>
+        </section>
+    {% endblock %}
+
+    {% block pycodex %}
+        <section class="pycodex">
+            <div class="container">
+                <div class="pycodex-con">
+                    <div class="pycodex-content">
+                        <h3 class="pycodex-content-heading">PyCodeX</h3>
+                        <p class="pycodex-content-description">
+                            Discover the Possibilities: AI and Python
+                            <br />
+                            Solutions for the Modern World
+                        </p>
+                        <div class="btn-div">
+                            <button class="btn">get started</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+    {% endblock %}
 
+    {% block footer %}
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">PyCodeX</p>
+                        {% for item in menus.footerMenu.menuOne %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
 
-    <script src="{% static 'script/script.js' %}"></script>
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">Services</p>
+                        {% for item in menus.footerMenu.menuTwo %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
+                    <nav class="footer-content-navbar">
+                        <p class="footer-contnet-navbar-text">Help</p>
+                        {% for item in menus.footerMenu.menuThree %}
+                        <a href="#" class="footer-content-navbar-rout"
+                            >{{item}}</a
+                        >
+                        {% endfor %}
+                    </nav>
 
-</body>
-</html>
+                    <div class="footer-content-subscribe">
+                        <h3 class="footer-contnet-navbar-text">Subscribe</h3>
+                        <input
+                            class="footer-content-subscibe-input"
+                            type="text"
+                            placeholder="Your email address"
+                        />
+                        <button type="button" class="footer-btn">Send</button>
+                        <div class="footer-content-subscibe-icon">
+                            <img
+                                src="{% static './images/icon/google.svg' %}"
+                                alt=""
+                            />
+                            <img
+                                src="{% static './images/icon/facebook.svg' %}"
+                                alt=""
+                            />
+                            <img
+                                src="{% static './images/icon/instagram.svg' %}"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <span class="footer-copyright-text">
+                        &copy; 2023 PyCodeX LTD. All Rights Reserved
+                    </span>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}

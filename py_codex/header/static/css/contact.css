@@ -1,0 +1,92 @@
+@import url("../fonts/Lato/stylesheet.css");
+@import url("../fonts/RubikGlitch/stylesheet.css");
+@import url("../fonts/Tomorrow/stylesheet.css");
+
+:root {
+    --blue: #353bd2;
+    --green: #10e371;
+    --green2: #0c4426;
+    --black: #101010;
+    --white: #ffffff;
+    --white2: rgba(255, 255, 255, 0.7);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+}
+
+/* Contact social media */
+
+
+.social{
+    margin-top: 86.7px;
+}
+.social-content{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-heading{
+    color: var(--white);
+    font-family: 'Tomorrow';
+    font-size: 75px;
+    font-weight: 600;
+    text-align: center;
+    padding: 40px 0;
+    text-decoration: underline;
+    line-height: 82px; 
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+}
+#map{
+    width: 600px;
+    height: 620px;
+    background: #313131;
+    padding: 120px 0;
+    border-radius: 20px;
+}
+.social-media-mini{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 300px;
+}
+.social-media-mini{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 50px;
+}
+.social-media .social-media-mini:nth-child(1){
+    background-color: #0f2d36;
+}
+.social-media .social-media-mini:nth-child(2){
+    background-image: linear-gradient(#833AB4, #FD1D1D, #FCAF45);
+}
+.social-media2 .social-media-mini:nth-child(1){
+    background-color: #2f2f2f;
+}
+.social-media2 .social-media-mini:nth-child(2){
+    background-color: #341ebe;
+}
+.social-media2 .social-media-mini img{
+    width: 135px;
+    height: 135px;
+}
+.social-media-mini-routing{
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(1px);
+    padding: 6px 40px;
+    color: var(--white);
+    font-family: 'Lato';
+    font-size: 30px;
+    line-height: 123%;
+    letter-spacing: 0.4px;
+}
