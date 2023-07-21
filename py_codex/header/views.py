@@ -53,16 +53,8 @@ def contact(request):
     my_marker_label = "PyCodeX office"
     map_html = create_map_with_marker(my_latitude, my_longitude, my_marker_label)
 
-    # if request.method == 'POST':
-    #     form = MyForm(request.POST)
-    #     if form.is.valid():
-    #         name = form.cleaned_data['name']
-    #         email = form.cleaned_data['email']
-    #     else:
-    #         pass
-    # else:
-    #     form = MyForm()
-
     return render(
-        request, "./contact/contact.html", {"menus": menus, "map_html": map_html}
+        request,
+        "./contact/contact.html",
+        {"menus": menus, "map_html": map_html},
     )
